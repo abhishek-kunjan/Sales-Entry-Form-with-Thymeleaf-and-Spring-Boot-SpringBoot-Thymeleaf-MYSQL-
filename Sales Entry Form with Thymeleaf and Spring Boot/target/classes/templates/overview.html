@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Confirmation</title>
+</head>
+<body>
+
+
+	<h2>Confirm Sale</h2>
+
+
+	<form th:action="@{submit}" method="post"
+		th:object="${sale}">
+
+
+		<label>Customer Id : </label>
+		<input th:field="${customer.customerid}"readonly="readonly">
+		<br><br>
+		<label>Customer Name : </label>
+		<input th:field="${customer.customername}" readonly="readonly">
+		<br><br>
+		<label>Customer Address: </label>
+		<input th:field="${customer.address}"readonly="readonly">
+		<br><br>
+		<label>Customer phone : </label>
+		<input th:field="${customer.phone}" readonly="readonly">
+		<br>
+		<br>
+		
+		<label>Item Id : </label>
+		<input th:field="${item.itemid}" readonly="readonly">
+		<br><br>
+		<label>Item Name : </label>
+		<input th:field="${item.itemname}" readonly="readonly">
+		<br><br>
+		<label>Price : </label>
+		<input th:field="${item.price}" readonly="readonly">
+		<br><br>
+		<label>Purchase Date : </label>
+		<input th:field="${item.purchasedt}" readonly="readonly">		<br><br>
+		<label>manufacture date : </label>
+		<input th:field="${item.manufactdt}" readonly="readonly">
+		<br><br>
+		<label>Expiry Date : </label>
+		<input th:field="${item.expirydt}" readonly="readonly">
+		<br><br>
+		<label>Sale Date :</label>
+		<input th:field="*{saledate}" readonly="readonly">
+		
+		
+		
+
+
+		<button type="submit">select</button>
+
+
+
+	</form>
+
+
+
+</body>
+</html>

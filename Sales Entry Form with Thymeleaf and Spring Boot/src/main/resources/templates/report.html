@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Confirmation</title>
+</head>
+<body>
+
+
+	<h2>Sale Report</h2>
+
+
+
+	<table border="1">
+
+		<thead>
+			<tr>
+
+				<th>Customer Id</th>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Phone</th>
+
+
+				<th>Item Id</th>
+				<th>Item</th>
+				<th>Price</th>
+
+				<th>Manufacture date</th>
+				<th>Expiry Date</th>
+				<th>Sale Date</th>
+
+			</tr>
+		</thead>
+
+
+		<tbody>
+			<tr>
+
+				<td th:text="${customer.customerid}"></td>
+				<td th:text="${customer.customername}"></td>
+				<td th:text="${customer.address}"></td>
+				<td th:text="${customer.phone}"></td>
+
+				<td th:text="${item.itemid}"></td>
+				<td th:text="${item.itemname}"></td>
+				<td th:text="${item.price}"></td>
+
+				<td th:text="${item.manufactdt}"></td>
+				<td th:text="${item.expirydt}"></td>
+				<td th:text="${sale.saledate}"></td>
+
+
+
+
+
+
+			</tr>
+		</tbody>
+
+	</table>
+
+
+
+
+
+
+
+</body>
+</html>

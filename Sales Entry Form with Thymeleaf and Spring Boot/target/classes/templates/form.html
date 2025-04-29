@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sale Form</title>
+</head>
+<body>
+
+
+	<h2>Selection Form</h2>
+
+
+	<form th:action="@{/selection-overview}" method="post" th:object="${sale}">
+
+
+<label>Customer : </label>
+		<select th:field="*{customerid}">
+			<option th:each="c : ${customers}" th:text="${c.customername}"
+				th:value="${c.customerid}"></option>
+
+		</select>
+
+
+<label>Item : </label>
+	<select th:field="*{itemid}">
+			<option th:each="i : ${items}" th:text="${i.itemname}"
+				th:value="${i.itemid}"></option>
+
+		</select>
+		
+		
+		<label>Date (yyyy-mm-dd ) : </label>
+		<input th:field="*{saledate}" type="text">
+		
+		<button type="submit">select</button>
+
+
+
+	</form>
+
+
+
+</body>
+</html>
